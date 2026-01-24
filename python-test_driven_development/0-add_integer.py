@@ -1,15 +1,13 @@
-#!/usr/bin/python3
-
 def add_integer(a, b=98):
     """
     Adds two integers.
 
-    Args:
-        a: The first number (must be an integer or float).
-        b: The second number (must be an integer or float). Default is 98.
+    Arguments:
+        a (int or float): The first number to be added.
+        b (int or float, optional): The second number to be added. Defaults to 98.
 
     Returns:
-        The sum of a and b as an integer.
+        int: The sum of the two numbers, casted to an integer.
 
     Raises:
         TypeError: If a or b are not integers or floats.
