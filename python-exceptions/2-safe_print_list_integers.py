@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import sys
 
 def safe_print_list_integers(my_list=[], x=0):
     count = 0
@@ -9,8 +8,7 @@ def safe_print_list_integers(my_list=[], x=0):
                 print("{:d}".format(my_list[i]), end="")
                 count += 1
         except IndexError:
-            print("Traceback (most recent call last):", file=sys.stderr)
-            print("IndexError: list index out of range", file=sys.stderr)
+            print("IndexError: list index out of range")
             break
     print()
     return count
