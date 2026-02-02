@@ -34,4 +34,4 @@ class CustomObject:
                 return obj
             return None
         except (FileNotFoundError, PermissionError, EOFError, pickle.PickleError):
-            return Nonex
+            return None
