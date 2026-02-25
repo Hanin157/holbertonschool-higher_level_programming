@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""List all states from the database hbtn_0e_0_usa that don't start with N."""
+"""List all states from the database that don't start with N."""
 
 import sys
 import MySQLdb
@@ -19,8 +19,14 @@ def main():
         db=dbname,
         charset="utf8"
     )
+
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name NOT LIKE 'N%' ORDER BY id ASC;")
+    cur.execute(
+        "SELECT * FROM states "
+        "WHERE name NOT LIKE 'N%' "
+        "ORDER BY id ASC;"
+    )
+
     for row in cur.fetchall():
         print(row)
 
