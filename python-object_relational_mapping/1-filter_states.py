@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""List all states from a database that don't start with 'N'."""
+"""List all states from a database that start with the letter N."""
 
 import sys
 import MySQLdb
 
 
 def main():
-    """Connect to MySQL and print states not starting with 'N'."""
+    """Connect to MySQL and print states starting with 'N'."""
     username = sys.argv[1]
     password = sys.argv[2]
     dbname = sys.argv[3]
@@ -19,10 +19,11 @@ def main():
         db=dbname,
         charset="utf8"
     )
+
     cur = db.cursor()
     query = (
         "SELECT * FROM states "
-        "WHERE name NOT LIKE 'N%' "
+        "WHERE name LIKE 'N%' "
         "ORDER BY id ASC;"
     )
     cur.execute(query)
