@@ -1,0 +1,13 @@
+curl is a command-line tool used to send HTTP requests and retrieve data from servers.
+
+1. curl --version
+This command checks if curl is installed and shows supported protocols.
+
+2. curl https://jsonplaceholder.typicode.com/posts
+This sends a GET request and retrieves JSON data (posts).
+
+3. curl -I https://jsonplaceholder.typicode.com/posts
+This fetches only the response headers such as status code and content type.
+
+4. curl -X POST -d "title=foo&body=bar&userId=1" https://jsonplaceholder.typicode.com/posts
+This sends a POST request with data and returns a simulated response from the API.
